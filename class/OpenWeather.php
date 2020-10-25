@@ -17,23 +17,11 @@ class OpenWeather
      * @param string $lat
      * @param string $lon
      * @return array
-     * @throws Exception
      */
     public function getForecast(string $lat, string $lon): array
     {
-        $curl = curl_init("https://api.openweathermap.org/data/2.5/onecall?lat={$lat}&lon={$lon}&exclude=current,minutely,hourly&appid={$this->apikey}&lang=fr&units=metric");
-        curl_setopt_array($curl,
-          [
-              CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_TIMEOUT => 1,
-          ]
-        );
-        $data = curl_exec($curl);
-        if($data === false || curl_getinfo($curl, CURLINFO_HTTP_CODE !== 200)){
-            var_dump(curl_error($curl));
-        }
+        $data = $this->getApi("onecall?lat={$lat}&lon={$lon}&exclude=current,minutely,hourly&appid={$this->apikey}");
         $result = [];
-        $data = json_decode($data, true);
         foreach($data['daily'] as $day)
         {
             $result[] = [
@@ -45,5 +33,41 @@ class OpenWeather
         }
         return $result;
     }
+
+    /**
+     * @param string $city
+     * @return array
+     */
+    public function getToday(string $city): array
+    {
+        $data = $this->getApi("weather?q={$city}&appid={$this->apikey}");
+        return
+            [
+                'temp' => $data['main']['temp'],
+                'description' => $data['weather'][0]['description'],
+                'date' => new DateTime()
+            ];
+    }
+
+    /**
+     * @param string $attr
+     * @return array|null
+     */
+    private function getApi(string $attr):?array
+    {
+        $curl = curl_init("api.openweathermap.org/data/2.5/{$attr}&lang=fr&units=metric");
+        curl_setopt_array($curl,
+            [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_TIMEOUT => 1,
+            ]
+        );
+        $data = curl_exec($curl);
+        if($data === false || curl_getinfo($curl, CURLINFO_HTTP_CODE !== 200)){
+            var_dump(curl_error($curl));
+        }
+        return json_decode($data, true);
+    }
+
 
 }
