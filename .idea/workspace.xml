@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59227422-c36d-4db9-b3b5-2e0c6bdb7b03" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1jMgv7b9DF8jXvnXSqGQYVMCm5l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\php\api_curl\class" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59227422-c36d-4db9-b3b5-2e0c6bdb7b03" name="Default Changelist" comment="" />
+      <created>1603619601760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603619601760</updated>
+      <workItem from="1603619602918" duration="12903000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="510" y="87" key="NewPhpClassDialog" timestamp="1603633865141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="510" y="87" key="NewPhpClassDialog/-1360.0.1360.728/1366.0.1440.860/0.0.1366.728@0.0.1366.728" timestamp="1603633865141" />
+    <state x="-846" y="291" key="NewPhpFileDialog" timestamp="1603624270652">
+      <screen x="-1360" y="0" width="1360" height="728" />
+    </state>
+    <state x="-846" y="291" key="NewPhpFileDialog/-1360.0.1360.728/1366.0.1440.860/0.0.1366.728@-1360.0.1360.728" timestamp="1603624270652" />
+  </component>
+</project>
